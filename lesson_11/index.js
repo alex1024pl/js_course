@@ -1,36 +1,24 @@
 'use strict'
-const firstname = "Храпач ";
-const name = "Александр";
-console.log(firstname + name);
 
-let a = 14, b = 11;
+var testObj = {
+  a: 1,
+  b: 'bbb',
+  c: []
+},
 
-	if (a > b) 
-	{
-		console.log (a);
-	} if (a < b	) 
-	{
-		console.log (b);
-	}
+testArray = ['a', 'e', 'b'];
 
-	if (a > b) 
-	{
-		console.log (b);
-	} if (a < b	) 
-	{
-		console.log (a);
-	}
+function removeKeys1(obj, arr) {
+  Object.getOwnPropertyNames(obj).forEach(function(val){
+    if (arr.indexOf(val) >= 0) {
+      delete obj[val]
+    }
+  })
+  return obj;
+}
 
-console.log(a + b);
-console.log(a % b);
+console.log(removeKeys1(testObj, testArray));
 
-	if (a > b + 10) {
-		console.log(a + 10);
-	}
-	if (a < b) {
-		console.log(9);
-	} 
-		else (!a<b) 
-		{ 
-		console.log(b);
-		}
+function remoteKeys2() {
+	
+}
