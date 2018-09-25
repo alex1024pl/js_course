@@ -1,12 +1,12 @@
 'use strict'
 
-var testObj = {
+let tObj = {
   a: 1,
   b: 'bbb',
   c: []
 },
 
-testArray = ['a', 'e', 'b'];
+tArray = ['a', 'e', 'b'];
 
 function removeKeys1(obj, arr) {
   Object.getOwnPropertyNames(obj).forEach(function(val){
@@ -17,7 +17,7 @@ function removeKeys1(obj, arr) {
   return obj;
 }
 
-console.log(removeKeys1(testObj, testArray));
+console.log(removeKeys1(tObj, tArray));
 
 function remoteKeys2() {
 	
